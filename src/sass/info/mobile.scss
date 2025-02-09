@@ -1,0 +1,173 @@
+& {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: -9999px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+    background: #fff;
+    transition: .3s;
+
+    &.show {
+      left: 0;
+    }
+  }
+
+  .mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    &.active {
+      .open-mob {
+        display: none;
+      }
+
+      .close-mob {
+        display: block;
+      }
+    }
+
+    .close-mob {
+      display: none;
+    }
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+    gap: 16px;
+    .phone-btn {
+      padding: 4px;
+
+      .icon {
+        height: 26px;
+        width: 26px;
+        padding: 6px;
+      }
+
+      div {
+        display: none;
+      }
+    }
+  }
+
+  .logo {
+    max-width: 96px;
+  }
+
+  .header {
+    padding: 90px 0 50px;
+
+    h1 {
+      font-size: vw(56px);
+      margin-bottom: 24px;
+
+      span {
+        font-size: vw(280px);
+        padding-bottom: vw(93px);
+        padding-top: vw(50px);
+
+        &:after {
+          background-size: 100%;
+          width: calc(91.306px/2);
+          right: 4px;
+          height: calc(43px/2);
+          top: -16.5px;
+        }
+
+        &:before {
+          background-size: 100%;
+          width: calc(91.306px/2);
+          height: calc(43px/2);
+          bottom: -4px;
+        }
+      }
+
+      i {
+        font-size: vw(56px);
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 24px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &-btn {
+      font-size: 14px;
+      padding: 16px 20px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .offer {
+
+    &:after {
+      right: 0;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .timer {
+      font-size: 48px;
+      .number {
+        width: 54px;
+      }
+    }
+
+  }
+
+
+  .bonus {
+    padding: 60px 0;
+  
+    &-palm {
+      &-1 {
+        left: 0;
+      }
+  
+      &-2 {
+        right: 0;
+      }
+    }
+  }
+}

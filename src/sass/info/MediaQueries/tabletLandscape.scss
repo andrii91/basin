@@ -1,0 +1,51 @@
+@import '../../mq';
+
+@media #{$tabletLandscape} {
+  @import '../desktop';
+
+  .header {
+    padding: vw(165px) 0 vw(75px);
+
+    h1 {
+      font-size: vw(36px);
+      max-width: vw(1073px);
+
+      span {
+        font-size: vw(200px);
+        padding-top: vw(20px);
+        padding-bottom: vw(43px);
+
+        &:after {
+          background-size: 100%;
+          width: vw(91.306px);
+          height: vw(43px);
+          right: 0;
+        }
+
+        &:before {
+          background-size: 100%;
+          width: vw(91.306px);
+          height: vw(43px);
+          left: 0;
+        }
+      }
+
+      i {
+        font-size: vw(46px);
+      }
+
+    }
+  }
+  .bonus {
+  
+    &-palm {
+      &-1 {
+        left: 0;
+      }
+  
+      &-2 {
+        right: 0;
+      }
+    }
+  }
+}
