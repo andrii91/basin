@@ -117,7 +117,7 @@
   overflow: hidden;
 
   .container {
-    position: relative;
+    position: relative; 
     z-index: 1;
   }
 
@@ -521,6 +521,10 @@ b {
     background: #FCFCFC;
     position: relative;
     transition: 1s;
+
+    img {
+      max-width: 180.5px;
+    }
 
     &:before {
       content: "";;
