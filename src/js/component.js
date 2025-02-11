@@ -155,6 +155,14 @@ $( document ).ready(function() {
     }
   })
 
+  $('.check').each(function(){
+    if($(this).is(':checked')) {
+      $(this).parents('form').find('.check-success').removeAttr('disabled')
+    }else{
+      $(this).parents('form').find('.check-success').attr('disabled', 'disabled')
+    }
+  })
+
 
   function getCookie(name) {
     let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));

@@ -172,4 +172,61 @@
       }
     }
   }
+
+  .advantages {
+    text-align: center;
+
+    h2 {
+      text-align: center;
+    }
+
+    &-row {
+      flex-direction: column;
+    }
+
+    &-text {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-list {
+      padding: 0 32px;
+      gap: 24px;
+      margin-left: auto;
+      margin-right: auto;
+
+      li {
+        padding-left: 16px;
+        padding-top: 48px;
+        text-align: center;
+
+        &::before {
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        &::after {
+          top: 70%;
+        }
+      }
+    }
+
+    .bottom {
+      font-size: 16px;
+    }
+  }
+
+  .registration {
+    .label, .registration-btn {
+      max-width: 100%;
+      min-width: 100%;
+      flex: 1;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
