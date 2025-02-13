@@ -229,4 +229,46 @@
       height: 50px;
     }
   }
+
+  .health {
+    &-content {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+    }
+    &-list {
+      position: relative;
+      transform: none;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px 16px;
+
+      &::before {
+        display: none;
+      }
+      li {
+        position: relative;
+        transform: none !important;
+        left: inherit !important;
+        top: inherit !important;
+        bottom: inherit !important;
+        right: inherit !important;
+      }
+    }
+  }
+
+  .models {
+    &-row {
+      justify-content: center;
+    }
+  }
 }

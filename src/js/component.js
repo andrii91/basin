@@ -22,7 +22,7 @@ $( document ).ready(function() {
   function toggleBlockMore() {
     $('.block-more').each(function(){
       const blockMore = $(this);
-      const li = blockMore.find('li'); 
+      const li = blockMore.find('.models-item'); 
       let showItem = 8;
   
       if(isMobile()) {
@@ -212,6 +212,7 @@ function startCountdown() {
 }
 
 startCountdown();
+
 
 }) 
 

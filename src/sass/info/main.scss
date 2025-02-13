@@ -26,7 +26,7 @@
     li {
       a {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 40px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
 
     .social-fb {
       width: 32px;
@@ -123,7 +123,7 @@
 
   h1 {
     color: #FFF;
-    font-family: "Unbounded", serif;
+    font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;
     font-size: 36px;
     font-style: normal;
@@ -140,7 +140,7 @@
       font-weight: 700;
       padding-top: 20px;
       padding-bottom: 43px;
-      font-family: "Unbounded", serif;
+      font-family: "Unbounded", sans-serif;
       font-optical-sizing: auto;
       display: block;
       position: relative;
@@ -170,7 +170,7 @@
 
     i {
       font-size: 46px;
-      font-family: "Playfair Display";
+      font-family: "Playfair Display", sans-serif;
       font-style: italic;
       font-weight: 700;
       line-height: 120%; /* 55.2px */
@@ -192,7 +192,7 @@
   p {
     color: #FFF;
     text-align: center;
-    font-family: "Inter", serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-size: 20px;
     font-style: normal;
@@ -234,7 +234,7 @@
     background: linear-gradient(180deg, #FF8C57 0%, #DC713F 100%);
     box-shadow: 0px 7.489px 21.532px 0px rgba(65, 132, 247, 0.24);
     color: var(--White, #FFF);
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 14.979px;
     font-style: normal;
     font-weight: 700;
@@ -280,7 +280,7 @@
 h2 {
   color: #443C32;
   text-align: center;
-  font-family: Unbounded;
+  font-family: Unbounded, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -289,7 +289,7 @@ h2 {
 
 h4 {
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -299,7 +299,7 @@ h4 {
 h5 {
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -384,7 +384,7 @@ b {
         font-weight: 300;
         line-height: normal;
         text-transform: uppercase;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
       }
     }
   }
@@ -402,7 +402,7 @@ b {
 
     &-item {
       color: #000;
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 36px;
       font-style: normal;
       font-weight: 600;
@@ -439,13 +439,13 @@ b {
   box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.24);
   background-size: cover;
   color: var(--White, #FFF);
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   transition: .3s;
-  cursor: pointer;
+  cursor: pointer, sans-serif;
   padding: 24px 38px;
   display: inline-flex;
 
@@ -492,7 +492,7 @@ b {
   .subtitle {
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -555,7 +555,7 @@ b {
     .title {
       color: #000;
       text-align: center;
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
@@ -565,7 +565,7 @@ b {
     p {
       color: #000;
       text-align: center;
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -577,7 +577,7 @@ b {
 .outline-btn {
   color: var(--Primery-Blue, #3FBBD1);
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -632,7 +632,7 @@ b {
 
     p {
       color: #000;
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -667,7 +667,7 @@ b {
       &::before {
         content: counter(section);
         color: #FFF;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 900;
@@ -719,7 +719,7 @@ b {
 
       .title {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 900;
@@ -730,7 +730,7 @@ b {
 
       p {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -782,7 +782,7 @@ b {
 
   &-btn {
     color: #F9F9F9;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -793,7 +793,7 @@ b {
     padding: 14px 28px;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer, sans-serif;
     transition: .3s;
     border: 0;
 
@@ -820,12 +820,12 @@ b {
 .custom {
   &-radio {
     padding: 10px 16px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
-    cursor: pointer;
+    cursor: pointer, sans-serif;
     color: #fff;
     text-wrap: nowrap;
   
@@ -875,7 +875,7 @@ b {
     background: rgba(255, 255, 255, 0.05);
     padding: 15px 22px;
     color: rgba(255, 255, 255, 1);
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -893,7 +893,7 @@ b {
     border-radius: 58px;
     padding: 20px 22px;
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -910,7 +910,7 @@ b {
   &-checkbox {
     display: block;
     text-align: left;
-    cursor: pointer;
+    cursor: pointer, sans-serif;
 
     input {
       display: none;
@@ -938,7 +938,7 @@ b {
       position: relative;
       padding-left: 32px;
       color: #FFF;
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -974,11 +974,235 @@ b {
         opacity: 0;
       }
     }
-
-    
   }
 }
 
+.health {
+  text-align: center;
+  .subtitle {
+    color: #000;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    margin-bottom: 60px;
+  }
+
+  &-content {
+    position: relative;
+    width: 800px;
+    height: 608px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 99px;
+  }
+
+  &-image {
+    width: 292.131px;
+    height: 292.131px;
+  }
+
+  &-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 608px;
+    height: 608px;
+    border-radius: 50%;
+    border: 2px solid rgba(248, 134, 82, 0.1);
+
+    &::before {
+      content: "";
+      width: 446px;
+      height: 446px;
+      border-radius: 50%;
+      border: 2px solid var(--Primery-Blue, #3FBBD1);
+      opacity: 0.1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    li {
+      display: flex;
+      width: 219px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding-top: 20px;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:nth-child(2) {
+        left: 465px;
+        top: 162px;
+      }
+      &:nth-child(3) {
+        left: 484px;
+        bottom: 88px;
+      }
+      &:nth-child(4) {
+        bottom: -48px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:nth-child(5) {
+        left: -97px;
+        bottom: 85px;
+      }
+      &:nth-child(6) {
+        top: 158px;
+        left: -75px;
+      }
+
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #3FBBD1;
+      }
+
+      h5 {
+        color: #000;
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 21.6px */
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #000;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 19.2px */
+      }
+    }
+  }
+
+  &-bottom {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 32px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.models {
+  background: #F7F7F7;
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 40px auto;
+  }
+
+  &-item {
+    width: 280px;
+    border-radius: 20px;
+    border: 1px solid #E9E9E9;
+    background: #FFF;
+    box-shadow: 0px 5px 14px 0px rgba(43, 43, 47, 0.04);
+    padding: 15px 15px 17px;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 176px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      transition: .3s;
+    }
+
+    .title {
+      color: var(--Primery-Blue, #3FBBD1);
+      text-align: center;
+      font-family: Inter;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 127.273% */
+    }
+
+    p {
+      color: #4A4A4A;
+      text-align: center;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px; /* 166.667% */
+    }
+  }
+
+  &-more {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 21.6px */
+    align-items: center;
+    gap: 14px;
+    transition: .3s;
+    padding: 24px;
+    border-radius: 16px;
+    background: #EAE9E9;
+    display: inline-flex;
+    svg {
+      transition: .3s;
+    }
+    
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      color: #EAE9E9;
+      background: #000;
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
 
 body {
   overflow-x: hidden;
