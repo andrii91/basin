@@ -214,6 +214,15 @@ function startCountdown() {
 startCountdown();
 
 
+$('.projects-slider').slick({
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  lazyLoad: 'ondemand',
+  prevArrow: '<button class="carousel-prev"><svg><use xlink:href="#arrow-left"></use></svg></button>',
+  nextArrow: '<button class="carousel-next"><svg><use xlink:href="#arrow-right"></use></svg></button>',
+});
 }) 
 
 
