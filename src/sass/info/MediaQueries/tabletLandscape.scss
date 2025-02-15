@@ -54,4 +54,22 @@
       padding: 0 32px;
     }
   }
+
+  .reviews {
+    &-slider {
+      padding-bottom: 60px;
+    }
+    .slick-arrow {
+      top: inherit;
+      bottom: 0;
+      transform: none;
+    }
+
+    .carousel-prev {
+      left: 34%;
+    }
+    .carousel-next {
+      right: 34%;
+    }
+  }
 }

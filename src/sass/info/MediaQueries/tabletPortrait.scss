@@ -4,7 +4,15 @@
   @import '../mobile';
 
   & {
-     
+    .projects {
+      &-slider {
+        display: none;
+    
+        &-desktop {
+          display: block;
+        }
+      }
+    }
   }
 
 }

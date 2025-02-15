@@ -124,22 +124,31 @@ $( document ).ready(function() {
     }
   });
 
+  $.get("https://ipinfo.io", function (response) {
+    $('input[name="ip_address"]').val(response.ip);
+    $('input[name="city"]').val(response.city+' | '+response.country+' | '+response.region);
+  }, "jsonp");
+
   $('form').on('submit', function (e) {
     e.preventDefault();
     var $form = $(this);
     $form.find('.submit').addClass('inactive');
     $form.find('.submit').prop('disabled', true);
 
+    $.ajax({
+      type: 'POST',
+      url: 'php/telegram.php',
+      dataType: 'json',
+      data: $form.serialize(),
+      success: function (response) {}
+    });
 
     setTimeout(function () {
-      alert('Success');
-      
+      $('.successMessage').fadeIn().delay(3000).fadeOut();
+
       $form.find('.submit').removeClass('inactive');
       $form.find('.submit').prop('disabled', false);
       $form[0].reset();
-
-      $('#check-success').prop('disabled', true)
-      
     }, 1000);
 
   });
@@ -163,66 +172,109 @@ $( document ).ready(function() {
     }
   })
 
-
   function getCookie(name) {
-    let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    return match ? match[2] : null;
-}
+      let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? match[2] : null;
+  }
 
-function setCookie(name, value, hours) {
-    let date = new Date();
-    date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
-    document.cookie = name + "=" + value + "; path=/; expires=" + date.toUTCString();
-}
+  function setCookie(name, value, hours) {
+      let date = new Date();
+      date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+      document.cookie = name + "=" + value + "; path=/; expires=" + date.toUTCString();
+  }
 
-function startCountdown() {
-    let endTime = getCookie("countdownEnd");
-    if (!endTime) {
-        endTime = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 години
-        setCookie("countdownEnd", endTime, 3);
-    }
+  function startCountdown() {
+      let endTime = getCookie("countdownEnd");
+      if (!endTime) {
+          endTime = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 години
+          setCookie("countdownEnd", endTime, 3);
+      }
 
-    function updateTimer() {
-        let now = new Date().getTime();
-        let distance = endTime - now;
-        if (distance <= 0) {
-            endTime = new Date().getTime() + 3 * 60 * 60 * 1000;
-            setCookie("countdownEnd", endTime, 3);
-            distance = endTime - now;
+      function updateTimer() {
+          let now = new Date().getTime();
+          let distance = endTime - now;
+          if (distance <= 0) {
+              endTime = new Date().getTime() + 3 * 60 * 60 * 1000;
+              setCookie("countdownEnd", endTime, 3);
+              distance = endTime - now;
+          }
+
+          let hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+          let minutes = Math.floor((distance / (1000 * 60)) % 60);
+          let seconds = Math.floor((distance / 1000) % 60);
+
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          $("#timer").html(`
+            <div class="hours">${hours} <span>час</span></div> 
+            <div>:</div>
+            <div class="number">${minutes} <span>мин</span></div>
+            <div>:</div>
+            <div class="number">${seconds} <span>сек</span></div>
+          `);
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+  }
+
+  startCountdown();
+
+
+  $('.projects-slider').slick({
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    lazyLoad: 'ondemand',
+    prevArrow: '<button class="carousel-prev"><svg><use xlink:href="#arrow-left"></use></svg></button>',
+    nextArrow: '<button class="carousel-next"><svg><use xlink:href="#arrow-right"></use></svg></button>',
+  });
+
+  $('.faq-item .title').click(function(){
+    $(this).parent().toggleClass('active');
+    $(this).parent().find('.content').slideToggle(200);
+  });
+
+  $('.reviews-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoHeight: true, 
+    lazyLoad: 'ondemand', 
+    prevArrow: '<button class="carousel-prev"><svg><use xlink:href="#arrow-left"></use></svg></button>',
+    nextArrow: '<button class="carousel-next"><svg><use xlink:href="#arrow-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
         }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
 
-        let hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-        let minutes = Math.floor((distance / (1000 * 60)) % 60);
-        let seconds = Math.floor((distance / 1000) % 60);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        $("#timer").html(`
-          <div class="hours">${hours} <span>час</span></div> 
-          <div>:</div>
-          <div class="number">${minutes} <span>мин</span></div>
-          <div>:</div>
-          <div class="number">${seconds} <span>сек</span></div>
-        `);
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
-}
-
-startCountdown();
-
-
-$('.projects-slider').slick({
-  arrows: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  lazyLoad: 'ondemand',
-  prevArrow: '<button class="carousel-prev"><svg><use xlink:href="#arrow-left"></use></svg></button>',
-  nextArrow: '<button class="carousel-next"><svg><use xlink:href="#arrow-right"></use></svg></button>',
-});
+  $('[href="#registration"]').hover(function() {
+    $('.lozad').each(function() {
+      $(this).attr('src', $(this).data('src'));
+    });
+  });
+  
 }) 
 
 
